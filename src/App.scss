@@ -59,10 +59,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  @media print {
-    display: none;
-  }
-
   small {
     font-size: 0.7em;
     color: rgba(black, 0.4);
