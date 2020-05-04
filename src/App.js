@@ -27,11 +27,14 @@ class App extends Component {
     return (
       <>
         <div className='todo-list'>
-          <h1 className='center blue-text'>Grace's List</h1>
+          <h1 className='center blue-text' contentEditable={true}>
+            Grace's List
+          </h1>
           <Todos deleteTodo={this.deleteTodo} todos={this.state.todos} />
           <AddTodo addTodo={this.addTodo} />
         </div>
-        <button className='print_button'
+        <button
+          className='print_button'
           onClick={() => {
             window.print();
             return false;
