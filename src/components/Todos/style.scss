@@ -1,0 +1,76 @@
+@import '../../media';
+
+.todos-collection {
+  width: 100%;
+  margin-bottom: 20px;
+
+  .todo-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px 10px 10px;
+    border-bottom: 1px solid rgba(purple, 0.4);
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 0.8em;
+    color: #333333;
+
+    @include for-size(phone-only) {
+      &.titles {
+        display: none;
+      }
+
+      &.total {
+        flex-direction: row;
+      }
+
+      flex-direction: column;
+      > div {
+        width: 100% !important;
+        margin-bottom: 5px;
+        span {
+          display: inline-block !important;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    @media print {
+      &.titles {
+        display: flex;
+      }
+
+      flex-direction: row;
+      > div {
+        &:nth-child(1) {
+          width: 60% !important;
+        }
+        &:nth-child(2) {
+          width: 20% !important;
+        }
+        &:nth-child(3) {
+          width: 20% !important;
+        }
+        span {
+          display: none !important;
+        }
+      }
+    }
+
+    > div {
+      span {
+        display: none;
+      }
+      &:nth-child(1) {
+        width: 60%;
+      }
+      &:nth-child(2) {
+        width: 20%;
+      }
+      &:nth-child(3) {
+        width: 20%;
+      }
+    }
+  }
+}
