@@ -28,7 +28,7 @@ class App extends Component {
       <>
         <div className='todo-list'>
           <h1 className='center blue-text' contentEditable={true}>
-            Grace's List
+            Your list name here
           </h1>
           <Todos deleteTodo={this.deleteTodo} todos={this.state.todos} />
           <AddTodo addTodo={this.addTodo} />
@@ -42,6 +42,11 @@ class App extends Component {
         >
           Print
         </button>
+        <div className='small'>
+          <small>powered by Jude chinoso</small>
+          <small>jjchinosoviolet@gmail.com</small>
+          <small>view my projects at https://github.com/cvjude</small>
+        </div>
       </>
     );
   }
